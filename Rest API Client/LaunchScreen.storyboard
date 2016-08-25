@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gxK-LC-taN">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="GgA-YH-HyP">
+            <objects>
+                <viewController id="gxK-LC-taN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cT1-0S-X2Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="57S-Jk-3g6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GCQ-9I-vpT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="Zbi-YY-Gd2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zbi-YY-Gd2" firstAttribute="leading" secondItem="GCQ-9I-vpT" secondAttribute="leading" id="86B-vy-KQR"/>
+                            <constraint firstItem="Zbi-YY-Gd2" firstAttribute="top" secondItem="GCQ-9I-vpT" secondAttribute="top" id="PRs-CQ-BQI"/>
+                            <constraint firstItem="57S-Jk-3g6" firstAttribute="top" secondItem="Zbi-YY-Gd2" secondAttribute="bottom" id="Pqq-rg-So9"/>
+                            <constraint firstAttribute="trailing" secondItem="Zbi-YY-Gd2" secondAttribute="trailing" id="UIP-Pv-Y7a"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVb-pA-sgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397" y="379"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Launch" width="640" height="1136"/>
+    </resources>
+</document>
