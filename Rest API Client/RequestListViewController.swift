@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RequestListDelegate: class {
-    func selectedRowForOptions(indexPath:NSIndexPath);
+    func selectedRowForOptions(indexPath:NSIndexPath, dataSourceArray: NSArray);
 }
 
 class RequestListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -35,7 +35,7 @@ class RequestListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        delegate?.selectedRowForOptions(indexPath)
+        delegate?.selectedRowForOptions(indexPath, dataSourceArray: dataSourceArray)
     }
     
 
