@@ -163,23 +163,36 @@ class RootViewController : UIViewController, UITableViewDelegate, UITableViewDat
                 headerOptionsAuthorizationView.hidden = true
                 frame = headerPopOver.frame
                 frame.size = CGSizeMake(280, 220)
+                UIView.animateWithDuration(0.25, animations: {
+                    self.headerPopOver.frame = frame
+                    }, completion: { (finished) in
+                })
             } else if (dataSourceArrayForHeaderType[indexPath.row].isEqualToString("Authorization (Basic)") ) {
+                okButtonOutlet.hidden = true
+                cancelButtonOutlet.hidden = true
                 headerOptionsAcceptView.hidden = true
                 headerOptionsCustomView.hidden = true
-                headerOptionsAuthorizationView.hidden = false
+                headerOptionsAuthorizationView.hidden = true
                 frame = headerPopOver.frame
                 frame.size = CGSizeMake(280,280)
+                UIView.animateWithDuration(0.25, animations: {
+                    self.headerPopOver.frame = frame
+                    }, completion: { (finished) in
+                        self.headerOptionsAuthorizationView.hidden = false
+                        self.okButtonOutlet.hidden = false
+                        self.cancelButtonOutlet.hidden = false
+                })
             } else if (dataSourceArrayForHeaderType[indexPath.row].isEqualToString("Custom")) {
                 headerOptionsAcceptView.hidden = true
                 headerOptionsCustomView.hidden = false
                 headerOptionsAuthorizationView.hidden = true
                 frame = headerPopOver.frame
                 frame.size = CGSizeMake(280,280)
+                UIView.animateWithDuration(0.25, animations: {
+                    self.headerPopOver.frame = frame
+                    }, completion: { (finished) in
+                })
             }
-            UIView.animateWithDuration(0.25, animations: {
-                self.headerPopOver.frame = frame
-                }, completion: { (finished) in
-            })
             dismissPopOver()
         }
     }
